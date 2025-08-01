@@ -1,0 +1,36 @@
+.balance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+.balance-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.balance1{
+    font-size: 45px;
+    font-weight: bold;
+    color: green;
+}
+ 
+.depositbutton{
+    display:flex;
+    flex-direction: column;
+    background-color: green;
+    color:white;
+    padding: 8px;
+    margin: 10px;
+    
+} 
+.withdrawbutton{
+    display:flex;
+    flex-direction: row;
+    background-color: red;
+    color:white;
+    padding: 8px;
+    margin: 10px;
+}
+    
+
