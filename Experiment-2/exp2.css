@@ -39,7 +39,7 @@ height: 100vh;
 }
 .
 /* /* >We have set the margin-bottom of the balance-header to 20px. */
-balance-header 
+balance-header {
     font-size: 45px;
     font-weight: bold;
     color: rgb(44, 236, 44);
