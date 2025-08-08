@@ -7,7 +7,7 @@
 /* body{ We have set the body height to 100vh, display to flex, justify-content to center, align-items to center and background-color to white. */
 body{
 height: 100vh;
-  display: flex;
+ display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f1f1f1;
@@ -17,7 +17,7 @@ height: 100vh;
 
 .balance{
     background-color: white;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
