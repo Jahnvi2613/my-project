@@ -2,8 +2,8 @@ ADMIN DASHBOARD – LAYOUT & THEME TOGGLE
 1. FEATURE: Page Layout
 Requirement: The page should have four sections — Header, Sidebar, Main Content, and Footer — arranged neatly using CSS Grid.
 Functionality:
-Header spans the top and contains the page title and theme toggle label.
-Sidebar is fixed to the left with navigation links.
+Header covers the top and contains the page title and theme toggle label.
+Sidebar is fixed to the left with navigation links like users,setting,home.
 Main Content area displays welcome text and placeholder for admin data.
 Footer spans the bottom showing copyright.
 
@@ -12,10 +12,10 @@ Requirement: Users should be able to switch between light mode and dark mode wit
 Functionality:
 Toggle is controlled by a hidden checkbox linked to a clickable label "Dark Theme".
 When checked, CSS variables change the background colors of header, footer, and sidebar to dark shades and text to white.
-No JavaScript is required — the effect is purely CSS-based.
-CSS Styling Breakdown: A Structured Overview
+No JavaScript used — the effect is purely CSS-based.
+CSS Styling Breakdown
 1. ELEMENT: :root (CSS Variables)
-Purpose: Store theme colors in one place so they can be changed easily.
+Purpose: Store  colors in one place so they can be changed easily.
 Properties & Effects:
 --bg-header → Default header background (light green).
 --bg-footer → Default footer background (light green).
@@ -23,7 +23,7 @@ Properties & Effects:
 
 2. ELEMENT: input[type="checkbox"] (Theme Toggle Control)
 Purpose: Hide the checkbox but keep it functional.
-Property: display: none; → Makes checkbox invisible while label still toggles it.
+display: none; → Makes checkbox invisible while label still changes it.
 
 3. ELEMENT: * (Global Settings)
 Purpose: Apply consistent spacing and box sizing across all elements.
