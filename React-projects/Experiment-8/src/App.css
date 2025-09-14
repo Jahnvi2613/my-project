@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  background: #242424; /* keep dark background for contrast */
+  background: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,15 +18,12 @@ body, html {
   margin: 0;
 }
 
-/* Heading styles */
 .library-management h2 {
   margin-bottom: 28px;
   font-size: 2.2rem;
   font-weight: 700;
   color: #222;
 }
-
-/* Search box styling */
 .search-input {
   width: 100%;
   padding: 13px 16px;
@@ -40,7 +37,7 @@ body, html {
   box-sizing: border-box;
 }
 
-/* Book add form styling */
+
 .add-book-form {
   display: flex;
   gap: 14px;
@@ -73,7 +70,6 @@ body, html {
   background: #e0e0e0;
 }
 
-/* Individual book item styling */
 .book-item {
   display: flex;
   align-items: center;
@@ -99,7 +95,7 @@ body, html {
   color: #222;
 }
 
-/* Remove button */
+
 .remove-btn {
   margin-left: 14px;
   padding: 10px 26px;
@@ -117,7 +113,7 @@ body, html {
   color: #d42c2c;
 }
 
-/* No books found styling */
+
 .no-books {
   color: #888;
   font-size: 1.09rem;

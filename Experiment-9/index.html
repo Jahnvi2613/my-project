@@ -20,15 +20,12 @@
         return `Name: ${this.name}, Age: ${this.age}`;
       }
     }
-
-    // Student subclass extending Person
     class Student extends Person {
       constructor(name, age, course) {
         super(name, age);
         this.course = course;
       }
 
-      // Override displayInfo to include course
       displayInfo() {
         return `${super.displayInfo()}, Course: ${this.course}`;
       }
@@ -41,13 +38,11 @@
         this.department = department;
       }
 
-      // Override displayInfo to include department
       displayInfo() {
         return `${super.displayInfo()}, Department: ${this.department}`;
       }
     }
 
-    // Create instances
     const student1 = new Student("Jahnvi", 19, "Computer Science AIML");
     const teacher1 = new Teacher("Ms Vasudha", 24, "Computer Science AIML");
 
