@@ -1,40 +1,32 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require("express");
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const cors = require("cors");
+require("dotenv").config();
+
+const productsRouter = require("./routes/product");
+
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+
+app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/ChandigarhUniversity');
 
-const productSchema = new mongoose.Schema({
-  name: String,
-  price: Number,
-  category: String,
-  variants: [
-    {
-      color: String,
-      size: String,
-      stock: Number
-    }
-  ]
-});
-const Product = mongoose.model('Product', productSchema);
+app.use("/api/products", productsRouter);
 
-// Get all products
-app.get('/products', async (req, res) => {
-  const products = await Product.find();
-  res.json(products);
+app.get("/", (req, res) => {
+  res.send("E-commerce app running");
 });
 
-// Filter by category
-app.get('/products/category/:cat', async (req, res) => {
-  const products = await Product.find({ category: req.params.cat });
-  res.json(products);
-});
+const MONGODB_URI = process.env.MONGODB_URI ;
 
-// Project variant details
-app.get('/products/variants', async (req, res) => {
-  const products = await Product.find({}, { name: 1, variants: 1 });
-  res.json(products);
-});
-
-app.listen(3000, () => console.log('Server running on port 3000'));
+mongoose
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected MongoDB");
+    app.listen(PORT, () => console.log(`running on http://localhost:${PORT}`));
+  })
+  .catch((err) => console.error("MongoDB error:", err));
